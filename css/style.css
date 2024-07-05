@@ -18,6 +18,8 @@
 body {
   background-color: var(--dark-green);
   margin: 0;
+  font-family: nature-spirit;
+  letter-spacing: 0.2em;
 }
 
 h1 {
@@ -28,7 +30,6 @@ h1 {
 /* landing page */
 #landing-page{
   position: relative;
-  height: 100vh;
 }
 #landing-page h1 {
   position: absolute;
@@ -39,9 +40,6 @@ h1 {
   z-index: 1;
 }
 #main-img {
-  position: absolute;
-  top: 0;
-  left: 0;
   max-width: 100%;
   min-width: 100%;
   width: 100%;
@@ -56,5 +54,48 @@ h1 {
   }
   #landing-page h1 {
     top: 60vw;
+  }
+}
+
+/* Categories */
+section#categories {
+  width: 80%;
+  margin: auto;
+  margin-top: 2em;
+}
+section#categories > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+section#categories .category {
+  width: 30%;
+}
+section#categories h2 {
+  font-size: 2em;
+  margin-bottom: 2em;
+}
+section#categories h3 {
+  font-size: 1.5em;
+  text-align: center;
+}
+section#categories p {
+  font-size: 1.2em;
+  width: 80%;
+  margin-left: 10%;
+}
+section#categories img {
+  width: 80%;
+  margin-left: 10%;
+}
+
+@media screen and (max-width: 900px) {
+  section#categories > div {
+    flex-direction: column;
+    align-items: center;
+  }
+  section#categories .category {
+    width: 100%;
+    margin-bottom: 4em;
   }
 }
