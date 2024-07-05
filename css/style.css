@@ -1,0 +1,25 @@
+:root {
+  --light-green: #BEDBBB;
+  --dark-green: #8DB596;
+  --brown: #92817A;
+  --grey: #707070;
+}
+
+@font-face {
+  font-family: nature-impact;
+  src: url(../fonts/nature-impact-font/NatureImpactDemoRegular-0WAAo.otf);
+}
+
+@font-face {
+  font-family: nature-spirit;
+  src: url(../fonts/nature-spirit-font/NatureSpirit-jE7RM.otf);
+}
+
+body {
+  background-color: var(--dark-green);
+}
+
+h1 {
+  font-family: nature-impact;
+  letter-spacing: 0.3em;
+}
