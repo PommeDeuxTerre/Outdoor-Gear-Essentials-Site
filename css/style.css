@@ -27,6 +27,28 @@ h1 {
   letter-spacing: 0.3em;
 }
 
+/* selection color */
+::selection {
+    background-color: var(--brown);
+    color: #fff;
+}
+::-moz-selection {
+    background-color: var(--brown);
+    color: #fff;
+}
+::-o-selection {
+    background-color: var(--brown);
+    color: #fff;
+}
+::-ms-selection {
+    background-color: var(--brown);
+    color: #fff;
+}
+::-webkit-selection {
+    background-color: var(--brown);
+    color: #fff;
+}
+
 /* landing page */
 #landing-page{
   position: relative;
