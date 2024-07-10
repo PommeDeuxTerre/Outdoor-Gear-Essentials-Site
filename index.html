@@ -6,6 +6,10 @@
     <title>Home Outdoor Gear Essentials</title>
     <link href="css/style.css" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="./img/logo-outdoor-gear-essentials.png">
+    <!-- glidejs -->
+    <link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.core.min.css">
+    <link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.theme.min.css">
+    <script src="node_modules/@glidejs/glide/dist/glide.min.js"></script>
   </head>
   <body>
     <div id="landing-page">
@@ -14,18 +18,26 @@
     </div>
     <section id="categories">
       <h2>Catégories</h2>
-      <div>
-        <div class="category">
-          <img src="./img/category-boot.jpg" alt="">
-          <h3>Bottes</h3>
+      <div class="glide">
+        <div class="glide__track" data-glide-el="track">
+          <div class="glide__slides">
+            <div class="glide__slide category">
+              <img src="./img/category-boot.jpg" alt="">
+              <h3>Bottes</h3>
+            </div>
+            <div class="glide__slide category">
+              <img src="./img/category-backpacker.jpg" alt="">
+              <h3>Sacs à dos</h3>
+            </div>
+            <div class="glide__slide category">
+              <img src="./img/category-jacket.jpg" alt="">
+              <h3>Vestes</h3>
+            </div>
+          </div>
         </div>
-        <div class="category">
-          <img src="./img/category-backpacker.jpg" alt="">
-          <h3>Sacs à dos</h3>
-        </div>
-        <div class="category">
-          <img src="./img/category-jacket.jpg" alt="">
-          <h3>Vestes</h3>
+        <div class="glide__arrows" data-glide-el="controls">
+          <button class="glide__arrow glide__arrow--left" data-glide-dir="<">prev</button>
+          <button class="glide__arrow glide__arrow--right" data-glide-dir=">">next</button>
         </div>
       </div>
     </section>
@@ -50,5 +62,12 @@
       </div>
     </section>
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <script>
+      new Glide('.glide', {
+        type: 'carousel',
+        startAt: 0,
+        perView: 3,
+      }).mount();
+    </script>
   </body>
 </html>
