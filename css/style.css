@@ -15,16 +15,16 @@
   src: url(../fonts/nature-spirit-font/NatureSpirit-jE7RM.otf);
 }
 
+@font-face {
+  font-family: hand-written;
+  src: url(../fonts/handwritten/Vanlose\ Handwritten.ttf);
+}
+
 body {
   background-color: var(--dark-green);
   margin: 0;
   font-family: nature-spirit;
   letter-spacing: 0.2em;
-}
-
-h1 {
-  font-family: nature-impact;
-  letter-spacing: 0.3em;
 }
 
 /* selection color */
@@ -50,6 +50,10 @@ h1 {
 }
 
 /* landing page */
+h1 {
+  font-family: nature-impact;
+  letter-spacing: 0.3em;
+}
 #landing-page{
   position: relative;
 }
@@ -67,7 +71,10 @@ h1 {
   object-fit: cover;
   padding: 0;
 }
-
+h1 span {
+  font-family: hand-written;
+  font-size: 1.5em;
+}
 /* Categories */
 section#categories {
   width: 80%;
