@@ -19,7 +19,7 @@
     <section id="categories">
       <h2>Catégories</h2>
       <div class="glide">
-        <div class="glide__track" data-glide-el="track">
+        <div class="glide__track" data-glide-el="track" style="max-width: 100%;">
           <div class="glide__slides">
             <div class="glide__slide category">
               <img src="./img/category-boot.jpg" alt="">
@@ -43,31 +43,49 @@
     </section>
     <section id="articles">
       <h2>Articles</h2>
-      <div>
-        <div class="article">
-          <img src="./img/category-boot.jpg" alt="">
-          <h3>Bottes d'éscalade</h3>
-          <p>bottes de randonnée conçues pour offrir un confort ultime et une performance inégalée lors de vos aventures en plein air, que vous soyez un passionné de trekking ou simplement un amateur de balades en nature.</p>
+      <div class="glide">
+        <div class="glide__track" data-glide-el="track" style="max-width: 100%;">
+          <div class="glide__slides">
+            <div class="glide__slide article">
+              <img src="./img/category-boot.jpg" alt="">
+              <h3>Bottes d'éscalade</h3>
+              <p>bottes de randonnée conçues pour offrir un confort ultime et une performance inégalée lors de vos aventures en plein air, que vous soyez un passionné de trekking ou simplement un amateur de balades en nature.</p>
+            </div>
+            <div class="glide__slide article">
+              <img src="./img/category-backpacker.jpg" alt="">
+              <h3>Sac à dos d'éscalade</h3>
+              <p>sac à dos de randonnée conçu pour les aventuriers intrépides en quête de confort et de praticité, Durable, résistant aux intempéries et ultra-léger, ce sac à dos est l'allié idéal pour toutes vos aventures en plein air</p>
+            </div>
+            <div class="glide__slide article">
+              <img src="./img/category-jacket.jpg" alt="">
+              <h3>Veste d'éscalade</h3>
+              <p>veste résistante et imperméable qui vous protégera des intempéries tout en offrant une respirabilité optimale pour un confort maximal. Ses multiples poches pratiques vous permettront de garder vos essentiels à portée de main lors de vos excursions en pleine nature</p>
+            </div>
+          </div>
         </div>
-        <div class="article">
-          <img src="./img/category-backpacker.jpg" alt="">
-          <h3>Sac à dos d'éscalade</h3>
-          <p>sac à dos de randonnée conçu pour les aventuriers intrépides en quête de confort et de praticité, Durable, résistant aux intempéries et ultra-léger, ce sac à dos est l'allié idéal pour toutes vos aventures en plein air</p>
-        </div>
-        <div class="article">
-          <img src="./img/category-jacket.jpg" alt="">
-          <h3>Veste d'éscalade</h3>
-          <p>veste résistante et imperméable qui vous protégera des intempéries tout en offrant une respirabilité optimale pour un confort maximal. Ses multiples poches pratiques vous permettront de garder vos essentiels à portée de main lors de vos excursions en pleine nature</p>
+        <div class="glide__arrows" data-glide-el="controls">
+          <button class="glide__arrow glide__arrow--left" data-glide-dir="<">prev</button>
+          <button class="glide__arrow glide__arrow--right" data-glide-dir=">">next</button>
         </div>
       </div>
     </section>
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     <script>
-      new Glide('.glide', {
-        type: 'carousel',
-        startAt: 0,
-        perView: 3,
-      }).mount();
+      for (const slider of document.querySelectorAll(".glide")){
+        new Glide(slider, {
+          type: 'carousel',
+          startAt: 0,
+          perView: 3,
+          breakpoints: {
+              900: {
+                  perView: 2
+              },
+              500: {
+                  perView: 1
+              },
+          }
+        }).mount();
+      }
     </script>
   </body>
 </html>
